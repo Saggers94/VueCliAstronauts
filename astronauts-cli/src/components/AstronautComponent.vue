@@ -19,7 +19,7 @@
           {{ astronaut.personal_data }}
         </p>
         <p>
-          <a :href="url(astronaut.slug)" alt="Detail about Buzz Aldrin"
+          <a :href="url(astronaut.astronaut_id)" alt="Detail about Buzz Aldrin"
             >Read More</a
           >
         </p>
