@@ -16,11 +16,4 @@ export default {
 };
 </script>
 
-<style>
-#main_footer {
-  background-color: #0b3d91 !important;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-</style>
+<style lang="scss" scoped></style>
