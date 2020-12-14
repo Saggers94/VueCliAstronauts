@@ -8,7 +8,7 @@
       <!-- Flash Message if error in any action -->
 
       <div class="container">
-        <div class="row">
+        <div class="row pt-5">
           <div class="col col-xs-4">
             <img
               src="../assets/images/astronaut.svg"
