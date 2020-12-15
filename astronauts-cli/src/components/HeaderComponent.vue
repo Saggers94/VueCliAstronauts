@@ -22,23 +22,38 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <router-link to="/" class="nav-link active">
+              <router-link
+                to="/"
+                class="nav-link"
+                :class="{ active: state.path == '/' }"
+              >
                 Home
               </router-link>
-              <!-- <a class="nav-link active" href="/"
-                >Home
-                <span class="sr-only">(current)</span>
-              </a> -->
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="/astronauts">Astronauts</a>
+              <router-link
+                to="/astronauts"
+                class="nav-link"
+                :class="{ active: state.path == '/astronauts' }"
+                >Astronauts</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/about">About</router-link>
+              <router-link
+                class="nav-link"
+                to="/about"
+                :class="{ active: state.path == '/about' }"
+                >About</router-link
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
+              <router-link
+                to="/contact"
+                class="nav-link"
+                :class="{ active: state.path == '/contact' }"
+                >Contact</router-link
+              >
             </li>
           </ul>
         </div>
@@ -48,8 +63,23 @@
 </template>
 
 <script>
+import { reactive } from "vue";
+import { useRoute } from "vue-router";
 export default {
   name: "HeaderComponent",
+  setup() {
+    const state = reactive({
+      path: "",
+    });
+
+    const route = useRoute();
+    state.path = route.path;
+    // console.log(route.path);
+
+    return {
+      state,
+    };
+  },
 };
 </script>
 
