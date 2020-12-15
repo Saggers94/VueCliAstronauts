@@ -12,6 +12,7 @@
 </template>
 
 <script>
+// Completed the first Vue project
 import HeaderComponent from "../components/HeaderComponent";
 import FooterComponent from "../components/FooterComponent";
 import AstronautComponent from "../components/AstronautComponent";
