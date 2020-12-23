@@ -30,7 +30,7 @@ export default {
     });
 
     onMounted(() => {
-      fetch("http://localhost:9090/api/v1/astronauts")
+      fetch("https://springastronautsboot.herokuapp.com/api/v1/astronauts")
         .then(function(response) {
           return response.json();
         })

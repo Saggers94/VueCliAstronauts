@@ -82,7 +82,8 @@ export default {
 
     onMounted(() => {
       const url =
-        "http://localhost:9090/api/v1/astronauts/" + astronautId.value;
+        "https://springastronautsboot.herokuapp.com/api/v1/astronauts/" +
+        astronautId.value;
       fetch(url)
         .then(function(response) {
           return response.json();
